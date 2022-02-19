@@ -18,9 +18,9 @@ services:
       - sms_network
     restart: unless-stopped
   
-  # csv importer, will import the neighboring csv file
-  csv_importer:
-    container_name: sms_csv_importer
+  # json importer, will import the neighboring data.json file
+  json_importer:
+    container_name: sms_json_importer
     build: ./database
     networks:
       - sms_network
