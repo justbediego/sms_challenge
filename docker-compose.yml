@@ -1,0 +1,38 @@
+version: "3.3"
+services:
+  
+  # the actual database
+  # doesn't need to expose any port as its only used by the services in the same network
+  database:
+    container_name: sms_postgres_container
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test123
+      PGDATA: /data/postgres
+    volumes:
+       - sms_db:/data/postgres
+    ports:
+      - "1432:5432"
+    networks:
+      - sms_network
+    restart: unless-stopped
+  
+  # csv importer, will import the neighboring csv file
+  csv_importer:
+    container_name: sms_csv_importer
+    build: ./database
+    networks:
+      - sms_network
+    volumes:
+      - sms_importer:/data/sms_importer
+    depends_on:
+      - database
+
+networks:
+  sms_network:
+    driver: bridge
+
+volumes:
+    sms_db:
+    sms_importer:
