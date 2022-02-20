@@ -18,9 +18,9 @@ namespace SmsChallengeBackend.Presentation
         }
 
         [HttpPost]
-        public void CreateHistoryData(ModifyHistoryDataDTO model)
+        public long CreateHistoryData(ModifyHistoryDataDTO model)
         {
-            historyDataBusiness.CreateHistoryData(model);
+            return historyDataBusiness.CreateHistoryData(model);
         }
 
         [HttpPut]

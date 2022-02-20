@@ -21,9 +21,9 @@ namespace SmsChallengeBackend.Business
         }
 
 
-        public void CreateHistoryData(ModifyHistoryDataDTO model)
+        public long CreateHistoryData(ModifyHistoryDataDTO model)
         {
-            dbContext.Histories.Add(new HistoryData
+            HistoryData newData = new HistoryData
             {
                 City = model.City,
                 Color = model.Color,
@@ -31,8 +31,10 @@ namespace SmsChallengeBackend.Business
                 Price = model.Price,
                 StartDate = model.StartDate,
                 Status = model.Status
-            });
+            };
+            dbContext.Histories.Add(newData);
             dbContext.SaveChanges();
+            return newData.Id;
         }
 
         public void UpdateHistoryData(long id, ModifyHistoryDataDTO model)

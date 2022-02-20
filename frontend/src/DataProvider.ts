@@ -1,6 +1,4 @@
-import {GET_LIST} from 'react-admin';
-
-const apiUrl = '/api';
+import {CREATE, GET_LIST} from 'react-admin';
 
 interface HistoryDataDTO {
     id: number;
@@ -20,11 +18,8 @@ interface PagingResult<T> {
 }
 
 const dataProvider = (type: any, resource: any, params: any) => {
-    const options = {
-        headers: new Headers({
-            Accept: 'application/json',
-        }),
-    };
+    const headers = new Headers({Accept: 'application/json'});
+    const baseUrl = `/api/${resource}`;
     switch (type) {
         case GET_LIST: {
             const {page, perPage} = params.pagination;
@@ -45,12 +40,27 @@ const dataProvider = (type: any, resource: any, params: any) => {
             if (toDate) {
                 filter.push(`toDate=${toDate}`)
             }
-            return fetch(`${apiUrl}/${resource}?${filter.join('&')}`, options)
+            return fetch(`${baseUrl}?${filter.join('&')}`, {headers})
                 .then(res => res.json())
                 .then((response: PagingResult<HistoryDataDTO>) => ({
                     data: response.data,
                     total: response.totalCount
                 }));
+        }
+        case CREATE: {
+            const newData = {
+                city: params.data.city,
+                startDate: params.data.startDate,
+                endDate: params.data.endDate,
+                price: params.data.price,
+                status: params.data.status,
+                color: params.data.color,
+            } as HistoryDataDTO;
+            return fetch(baseUrl, {method: 'POST', headers, body: newData as any})
+                .then(res => res.json())
+                .then((response: number) => {
+                    debugger;
+                });
         }
         default:
             throw new Error(`Unsupported Data Provider request type ${type}`);

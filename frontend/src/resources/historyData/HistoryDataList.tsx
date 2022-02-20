@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Datagrid, DateField, DateInput, List, NumberField, TextField, TextInput} from 'react-admin';
+import {Datagrid, DateField, DateInput, List, NumberField, SelectField, TextField, TextInput} from 'react-admin';
 import "./HistoryDataList.scss"
 
 const {ColorField} = require('react-admin-color-input');
@@ -18,7 +18,16 @@ export const HistoryDataList = (props: any) => (
             <DateField source="startDate" locales="de-DE"/>
             <DateField source="endDate" locales="de-DE"/>
             <NumberField source="price"/>
-            <TextField source="status"/>
+            <SelectField source="status" choices={[
+                {id: 100, name: 'Once'},
+                {id: 101, name: 'Daily'},
+                {id: 102, name: 'Weekly'},
+                {id: 103, name: 'Yearly'},
+                {id: 104, name: 'Seldom'},
+                {id: 105, name: 'Monthly'},
+                {id: 106, name: 'Often'},
+                {id: 107, name: 'Never'}
+            ]}/>
             <ColorField source="color"/>
         </Datagrid>
     </List>
