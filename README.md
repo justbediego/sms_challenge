@@ -4,13 +4,51 @@
 
 ## Solution
 
-1. A `postgres` database server is created within a docker container and is then filled with the data provided as a `json` file using a `python3` script.
+1. A <strong>postgres</strong> database server is created within a docker container and is then filled with the data provided as a <strong>json</strong> file using a <strong>python</strong> script.
+2. A <strong>.net Core</strong> application is running as the backend engine to provide a RESTful interface together with their swaggerUI documentations.
+3. A <strong>react-admin</strong> frontend is implemented to present the data in a sortable table.
+4. Two Date pickers and a Search box is added to filter the data. (the filter is applied server-side)
 
-2. A `.net Core` application is running as the backend engine to provide a RESTful interface together with their swaggerUI documentations.
+## Screenshots
 
-3. 
-4. 
+| Start     |
+|-----------|
+|![Start](./screen1.PNG)|
+
+| Filtered Result |
+|-----------|
+|![Filtered Result](./screen2.PNG)|
+
+| Creating a new Data |
+|-----------|
+|![Filtered Result](./screen4.PNG)|
+
+| Swagger Documentation |
+|-----------|
+|![SwaggerUI](./screen3.PNG)|
 
 ## Structure
 
+This solution is divided into four parts:
+- <strong>database</strong>: A docker container of PostgreSQL instance with an empty database
+- <strong>json_importer</strong>: A python script that waits for the database to initialize and then imports its neighboring file named <strong>data.json</strong> into the database. The script can run multiple time without causing any issue as it only inserts the non-existing data into the DB.
+- <strong>backend</strong>: A .net core webapi application that communicates with the database and serves apis to be accessed by the frontend. The backend also hosts swagger documentations.
+- <strong>frontend</strong>: A react/react-admin web application that communicates with the backend CRUD apis to retrieve the neccessary data.
+
 ## How to run
+
+There is a <strong>docker-compose</strong> configuration available to run the project.
+
+### Quick Start
+You can simply run all four components together at once with the following command:
+
+<code>docker-compose up</code>
+
+After the command is successfully ran you can access the application through these two URLs (granting that docker containers are running locally):
+
+- Application: `http://localhost:4020/`
+- SwaggerUI: `http://localhost:5020/swagger`
+
+### Running locally
+In case you need to run any of these components locally on your machine you need to consider modifying their network configuration. Since they will no longer be running within a bridged netweek inside docker, they need to pinpoint to the correct address.
+For example, the backend component is currently pointing to internal docker address, <strong>http://database:5432</strong>, and this will need to change to an external address, something similar to <strong>http://localhost:1432</strong>.

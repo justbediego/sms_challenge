@@ -13,7 +13,7 @@ namespace SmsChallengeBackend.Business
         // validations are done at DTO level as no logic validations are required
         private readonly SmsDbContext dbContext;
 
-        private const int MaxPageSize = 200;
+        private const int MaxPageSize = 2000;
 
         public HistoryDataBusiness(SmsDbContext dbContext)
         {
@@ -21,18 +21,24 @@ namespace SmsChallengeBackend.Business
         }
 
 
-        public void CreateHistoryData(ModifyHistoryDataDTO model)
+        public long CreateHistoryData(ModifyHistoryDataDTO model)
         {
-            dbContext.Histories.Add(new HistoryData
+            if (model.EndDate < model.StartDate)
+            {
+                throw new InvalidInputException("EndDate", "EndDate is before StartDate");
+            }
+            HistoryData newData = new HistoryData
             {
                 City = model.City,
                 Color = model.Color,
-                EndDate = model.EndDate,
-                Price = model.Price,
-                StartDate = model.StartDate,
-                Status = model.Status
-            });
+                EndDate = model.EndDate.Value,
+                Price = model.Price.Value,
+                StartDate = model.StartDate.Value,
+                Status = model.Status.Value
+            };
+            dbContext.Histories.Add(newData);
             dbContext.SaveChanges();
+            return newData.Id;
         }
 
         public void UpdateHistoryData(long id, ModifyHistoryDataDTO model)
@@ -44,12 +50,16 @@ namespace SmsChallengeBackend.Business
             {
                 throw new EntityNotFoundException("HistoryData");
             }
-            historyData.StartDate = model.StartDate;
-            historyData.EndDate = model.EndDate;
-            historyData.Status = model.Status;
+            if (model.EndDate < model.StartDate)
+            {
+                throw new InvalidInputException("EndDate", "EndDate is before StartDate");
+            }
+            historyData.StartDate = model.StartDate.Value;
+            historyData.EndDate = model.EndDate.Value;
+            historyData.Status = model.Status.Value;
             historyData.Color = model.Color;
             historyData.City = model.City;
-            historyData.Price = model.Price;
+            historyData.Price = model.Price.Value;
             dbContext.Histories.Update(historyData);
             dbContext.SaveChanges();
         }
@@ -91,26 +101,26 @@ namespace SmsChallengeBackend.Business
         public PagingResult<HistoryDataDTO> GetHistories(GetHistoriesCriteriaDTO criteria)
         {
             IQueryable<HistoryData> histories = dbContext.Histories;
-            if (criteria.keyword != null)
+            if (criteria.Keyword != null)
             {
-                histories = histories.Where(history => history.City.ToLower().Contains(criteria.keyword.Trim().ToLower()));
+                histories = histories.Where(history => history.City.ToLower().Contains(criteria.Keyword.Trim().ToLower()));
             }
-            if (criteria.fromData != null)
+            if (criteria.FromDate != null)
             {
                 // overlap of two ranges is applied to both their sides
-                histories = histories.Where(history => history.StartDate >= criteria.fromData || history.EndDate > criteria.fromData);
+                histories = histories.Where(history => history.StartDate >= criteria.FromDate || history.EndDate > criteria.FromDate);
             }
 
-            if (criteria.toDate != null)
+            if (criteria.ToDate != null)
             {
                 // overlap of two ranges is applied to both their sides
-                histories = histories.Where(history => history.StartDate < criteria.toDate || history.EndDate <= criteria.toDate);
+                histories = histories.Where(history => history.StartDate < criteria.ToDate || history.EndDate <= criteria.ToDate);
             }
 
-            if (criteria.sortField != null)
+            if (criteria.SortField != null)
             {
-                bool isAscending = criteria.isAscending ?? true;
-                histories = criteria.sortField switch
+                bool isAscending = criteria.IsAscending ?? true;
+                histories = criteria.SortField switch
                 {
                     SortField.Price => isAscending ? histories.OrderBy(hist => hist.Price) : histories.OrderByDescending(hist => hist.Price),
                     SortField.StartDate => isAscending ? histories.OrderBy(hist => hist.StartDate) : histories.OrderByDescending(hist => hist.StartDate),
@@ -123,12 +133,16 @@ namespace SmsChallengeBackend.Business
                 };
             }
 
-            int pageSize = criteria.pageSize ?? MaxPageSize;
-            int pageIndex = criteria.pageIndex ?? 1;
+            int pageSize = criteria.PageSize ?? MaxPageSize;
+            int pageIndex = criteria.PageIndex ?? 1;
 
             if (pageSize > MaxPageSize || pageSize < 1)
             {
-                throw new InvalidPageSizeException(pageSize);
+                throw new InvalidInputException("PageSize", "value is either negative or too large");
+            }
+            if (pageIndex < 1)
+            {
+                throw new InvalidInputException("PageIndex", "value is less than 1");
             }
 
             long totalCount = histories.Count();

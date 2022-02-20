@@ -9,7 +9,7 @@ namespace SmsChallengeBackend.Business
 {
     public interface IHistoryDataBusiness
     {
-        void CreateHistoryData(ModifyHistoryDataDTO model);
+        long CreateHistoryData(ModifyHistoryDataDTO model);
 
         void UpdateHistoryData(long id, ModifyHistoryDataDTO model);
 

@@ -18,9 +18,9 @@ namespace SmsChallengeBackend.Presentation
         }
 
         [HttpPost]
-        public void CreateHistoryData(ModifyHistoryDataDTO model)
+        public long CreateHistoryData(ModifyHistoryDataDTO model)
         {
-            historyDataBusiness.CreateHistoryData(model);
+            return historyDataBusiness.CreateHistoryData(model);
         }
 
         [HttpPut]
@@ -46,17 +46,17 @@ namespace SmsChallengeBackend.Presentation
 
         // all parameters are optionals to beautify the URL
         [HttpGet]
-        public PagingResult<HistoryDataDTO> GetHistories(string keyword = null, int? pageSize = null, int? pageIndex = null, DateTime? fromData = null, DateTime? toDate = null, SortField? sortField = null, bool? isAscending = null)
+        public PagingResult<HistoryDataDTO> GetHistories(string keyword = null, int? pageSize = null, int? pageIndex = null, DateTime? fromDate = null, DateTime? toDate = null, SortField? sortField = null, bool? isAscending = null)
         {
             return historyDataBusiness.GetHistories(new GetHistoriesCriteriaDTO
             {
-                keyword = keyword,
-                pageSize = pageSize,
-                pageIndex = pageIndex,
-                fromData = fromData,
-                toDate = toDate,
-                sortField = sortField,
-                isAscending = isAscending
+                Keyword = keyword,
+                PageSize = pageSize,
+                PageIndex = pageIndex,
+                FromDate = fromDate,
+                ToDate = toDate,
+                SortField = sortField,
+                IsAscending = isAscending
             });
         }
     }
