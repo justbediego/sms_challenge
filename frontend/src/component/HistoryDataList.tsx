@@ -2,6 +2,8 @@ import * as React from "react";
 import {Datagrid, DateField, List, NumberField, TextField} from 'react-admin';
 import "./HistoryDataList.scss"
 
+const {ColorField} = require('react-admin-color-input');
+
 export const HistoryDataList = (props: any) => (
     <List {...props}>
         <Datagrid rowClick="edit">
@@ -11,7 +13,7 @@ export const HistoryDataList = (props: any) => (
             <DateField source="endDate"/>
             <NumberField source="price"/>
             <TextField source="status"/>
-            <TextField source="color"/>
+            <ColorField source="color" />
         </Datagrid>
     </List>
 );
