@@ -4,6 +4,7 @@ import {Admin, Resource} from 'react-admin';
 import dataProvider from './dataProvider';
 import {HistoryDataList} from "./resources/historyData/HistoryDataList";
 import {HistoryDataCreate} from "./resources/historyData/HistoryDataCreate";
+import {HistoryDataEdit} from "./resources/historyData/HistoryDataEdit";
 
 const App = () => (
     <Admin dataProvider={dataProvider}>
@@ -12,6 +13,7 @@ const App = () => (
             options={{label: 'Data'}}
             list={HistoryDataList}
             create={HistoryDataCreate}
+            edit={HistoryDataEdit}
         />
     </Admin>
 );

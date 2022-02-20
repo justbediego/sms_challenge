@@ -1,4 +1,4 @@
-import {CREATE, DELETE_MANY, GET_LIST} from 'react-admin';
+import {CREATE, DELETE_MANY, GET_LIST, GET_ONE, UPDATE} from 'react-admin';
 
 interface HistoryDataDTO {
     id: number;
@@ -28,6 +28,12 @@ const dataProvider = (type: any, resource: any, params: any) => {
         return {data: []}
     }
 
+    const getOne = async () => {
+        const res = await fetch(`${baseUrl}/${params.id}`, {headers});
+        const data = await res.json();
+        return {data};
+    }
+
     const getList = async () => {
         const {page, perPage} = params.pagination;
         const {field, order} = params.sort;
@@ -47,12 +53,18 @@ const dataProvider = (type: any, resource: any, params: any) => {
         if (toDate) {
             filter.push(`toDate=${toDate}`)
         }
-        return await fetch(`${baseUrl}?${filter.join('&')}`, {headers})
-            .then(res => res.json())
-            .then((response: PagingResult<HistoryDataDTO>) => ({
-                data: response.data,
-                total: response.totalCount
-            }));
+        const res = await fetch(`${baseUrl}?${filter.join('&')}`, {headers});
+        const body: PagingResult<HistoryDataDTO> = await res.json();
+        return {
+            data: body.data,
+            total: body.totalCount
+        };
+    }
+
+    const throwProperMessage = (res: any) => {
+        throw res.errors ?
+            Object.keys(res.errors).map(key => res.errors[key]).join(", ")
+            : "Request did not succeed !";
     }
 
     const createOne = async () => {
@@ -64,27 +76,47 @@ const dataProvider = (type: any, resource: any, params: any) => {
             status: params.data.status,
             color: params.data.color,
         } as HistoryDataDTO;
-        return fetch(baseUrl, {method: 'POST', headers, body: JSON.stringify(newData)})
-            .then(res => res.json())
-            .then(res => {
-                if (res.status && res.status !== 200) {
-                    throw res.errors ?
-                        Object.keys(res.errors).map(key => res.errors[key]).join(", ")
-                        : "Request did not succeed !";
-                }
-                return {data: {...params.data, id: res}};
-            });
+        const res = await fetch(baseUrl, {method: 'POST', headers, body: JSON.stringify(newData)});
+        const body = await res.json();
+        if (body.status && body.status !== 200) {
+            throwProperMessage(body);
+        }
+        return {data: {...params.data, id: body}};
+    }
+
+    const updateOne = async () => {
+        const updateData = {
+            city: params.data.city,
+            startDate: params.data.startDate,
+            endDate: params.data.endDate,
+            price: params.data.price,
+            status: params.data.status,
+            color: params.data.color,
+        } as HistoryDataDTO;
+        const response = await fetch(`${baseUrl}/${params.id}`, {
+            method: 'PUT',
+            headers,
+            body: JSON.stringify(updateData)
+        });
+        if (response.status == 200) {
+            return {data: {...params.data, id: params.id}};
+        }
+        // trying to process the exception
+        const body = await response.json();
+        throwProperMessage(body);
     }
 
     switch (type) {
-        case GET_LIST: {
+        case GET_LIST:
             return getList();
-        }
-        case CREATE: {
+        case GET_ONE:
+            return getOne();
+        case CREATE:
             return createOne();
-        }
         case DELETE_MANY:
             return deleteMany();
+        case UPDATE:
+            return updateOne();
         default:
             debugger;
             throw new Error(`Unsupported Data Provider request type ${type}`);

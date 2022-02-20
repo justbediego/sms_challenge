@@ -9,6 +9,24 @@
 3. A `react-admin` frontend is implemented to present the data in a sortable table.
 4. Two Date pickers and a Search box is added to filter the data. (the filter is applied server-side)
 
+## Screen Shots
+
+| Start     |
+|-----------|
+|![Start](./screen1.PNG)|
+
+| Filtered Result |
+|-----------|
+|![Filtered Result](./screen2.PNG)|
+
+| Creating a new Data |
+|-----------|
+|![Filtered Result](./screen4.PNG)|
+
+| Swagger Documentation |
+|-----------|
+|![SwaggerUI](./screen3.PNG)|
+
 ## Structure
 
 ## How to run
@@ -22,6 +40,5 @@
 #TODO:
 BACKEND TESTS
 FRONTEND TESTS
-EDIT
 DOCKERFILE
 REMOVE THIS TODO
