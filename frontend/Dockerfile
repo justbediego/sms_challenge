@@ -1,15 +1,16 @@
-FROM node:13.12.0-alpine
+FROM node:alpine
 WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
-COPY tsconfig.json ./
-COPY src ./
-COPY public ./
+COPY yarn.lock ./
 
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN yarn install --silent
+RUN yarn global add react-scripts --silent
+
+COPY . .
+
+EXPOSE 3000
 
 # start app
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
