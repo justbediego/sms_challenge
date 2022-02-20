@@ -29,6 +29,20 @@ services:
     depends_on:
       - database
 
+  # .net core backend
+  # ports are not required to be exposed, this is only done for swaggerUI
+  backend:
+    container_name: sms_backend
+    build: ./backend
+    networks:
+      - sms_network
+    ports:
+      - "5020:5020"
+    volumes:
+      - sms_backend:/data/sms_backend
+    depends_on:
+      - database
+
 networks:
   sms_network:
     driver: bridge
@@ -36,3 +50,4 @@ networks:
 volumes:
     sms_db:
     sms_importer:
+    sms_backend:

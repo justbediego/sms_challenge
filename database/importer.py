@@ -38,7 +38,7 @@ db_cursor = db_connection.cursor()
 # Initializing the DB structure
 db_cursor.execute("""
     CREATE TABLE IF NOT EXISTS history_data (
-        id bigint PRIMARY KEY,
+        id serial PRIMARY KEY,
         city varchar(100),
         start_date date,
         end_date date,
@@ -74,6 +74,8 @@ insert_query = '\n'.join([F"""
     );""" for row in importedData if row['id'] not in existing_ids])
 if insert_query:
     db_cursor.execute(insert_query)
+    # did not want to use auto generated ids for the provided data
+    db_cursor.execute("SELECT setval('history_data_id_seq', (SELECT MAX(id) FROM history_data) + 1);")
     db_connection.commit()
     print('Successfully imported "data.json" to DB', flush=True)
 else:
