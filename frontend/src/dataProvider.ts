@@ -98,7 +98,7 @@ const dataProvider = (type: any, resource: any, params: any) => {
             headers,
             body: JSON.stringify(updateData)
         });
-        if (response.status == 200) {
+        if (response.status === 200) {
             return {data: {...params.data, id: params.id}};
         }
         // trying to process the exception

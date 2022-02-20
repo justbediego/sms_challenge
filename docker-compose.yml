@@ -43,6 +43,19 @@ services:
     depends_on:
       - database
 
+  # react-admin frontend
+  frontend:
+    container_name: sms_frontend
+    build: ./frontend
+    networks:
+      - sms_network
+    ports:
+      - "4020:3000"
+    volumes:
+      - sms_frontend:/data/sms_frontend
+    depends_on:
+      - backend
+
 networks:
   sms_network:
     driver: bridge
@@ -51,3 +64,4 @@ volumes:
     sms_db:
     sms_importer:
     sms_backend:
+    sms_frontend:

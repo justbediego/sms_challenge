@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://192.168.1.149:5020"
+  "proxy": "http://backend:5020"
 }
