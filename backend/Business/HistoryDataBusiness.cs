@@ -23,6 +23,10 @@ namespace SmsChallengeBackend.Business
 
         public long CreateHistoryData(ModifyHistoryDataDTO model)
         {
+            if (model.EndDate < model.StartDate)
+            {
+                throw new InvalidInputException("EndDate", "EndDate is before StartDate");
+            }
             HistoryData newData = new HistoryData
             {
                 City = model.City,
@@ -45,6 +49,10 @@ namespace SmsChallengeBackend.Business
             if (historyData == null)
             {
                 throw new EntityNotFoundException("HistoryData");
+            }
+            if (model.EndDate < model.StartDate)
+            {
+                throw new InvalidInputException("EndDate", "EndDate is before StartDate");
             }
             historyData.StartDate = model.StartDate;
             historyData.EndDate = model.EndDate;
@@ -93,26 +101,26 @@ namespace SmsChallengeBackend.Business
         public PagingResult<HistoryDataDTO> GetHistories(GetHistoriesCriteriaDTO criteria)
         {
             IQueryable<HistoryData> histories = dbContext.Histories;
-            if (criteria.keyword != null)
+            if (criteria.Keyword != null)
             {
-                histories = histories.Where(history => history.City.ToLower().Contains(criteria.keyword.Trim().ToLower()));
+                histories = histories.Where(history => history.City.ToLower().Contains(criteria.Keyword.Trim().ToLower()));
             }
-            if (criteria.fromDate != null)
+            if (criteria.FromDate != null)
             {
                 // overlap of two ranges is applied to both their sides
-                histories = histories.Where(history => history.StartDate >= criteria.fromDate || history.EndDate > criteria.fromDate);
+                histories = histories.Where(history => history.StartDate >= criteria.FromDate || history.EndDate > criteria.FromDate);
             }
 
-            if (criteria.toDate != null)
+            if (criteria.ToDate != null)
             {
                 // overlap of two ranges is applied to both their sides
-                histories = histories.Where(history => history.StartDate < criteria.toDate || history.EndDate <= criteria.toDate);
+                histories = histories.Where(history => history.StartDate < criteria.ToDate || history.EndDate <= criteria.ToDate);
             }
 
-            if (criteria.sortField != null)
+            if (criteria.SortField != null)
             {
-                bool isAscending = criteria.isAscending ?? true;
-                histories = criteria.sortField switch
+                bool isAscending = criteria.IsAscending ?? true;
+                histories = criteria.SortField switch
                 {
                     SortField.Price => isAscending ? histories.OrderBy(hist => hist.Price) : histories.OrderByDescending(hist => hist.Price),
                     SortField.StartDate => isAscending ? histories.OrderBy(hist => hist.StartDate) : histories.OrderByDescending(hist => hist.StartDate),
@@ -125,12 +133,16 @@ namespace SmsChallengeBackend.Business
                 };
             }
 
-            int pageSize = criteria.pageSize ?? MaxPageSize;
-            int pageIndex = criteria.pageIndex ?? 1;
+            int pageSize = criteria.PageSize ?? MaxPageSize;
+            int pageIndex = criteria.PageIndex ?? 1;
 
             if (pageSize > MaxPageSize || pageSize < 1)
             {
-                throw new InvalidPageSizeException(pageSize);
+                throw new InvalidInputException("PageSize", "value is either negative or too large");
+            }
+            if (pageIndex < 1)
+            {
+                throw new InvalidInputException("PageIndex", "value is less than 1");
             }
 
             long totalCount = histories.Count();

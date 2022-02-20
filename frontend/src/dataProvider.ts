@@ -18,7 +18,7 @@ interface PagingResult<T> {
 }
 
 const dataProvider = (type: any, resource: any, params: any) => {
-    const headers = new Headers({Accept: 'application/json'});
+    const headers = new Headers({Accept: 'application/json', 'Content-Type': "application/json"});
     const baseUrl = `/api/${resource}`;
     switch (type) {
         case GET_LIST: {
@@ -56,11 +56,9 @@ const dataProvider = (type: any, resource: any, params: any) => {
                 status: params.data.status,
                 color: params.data.color,
             } as HistoryDataDTO;
-            return fetch(baseUrl, {method: 'POST', headers, body: newData as any})
+            return fetch(baseUrl, {method: 'POST', headers, body: JSON.stringify(newData)})
                 .then(res => res.json())
-                .then((response: number) => {
-                    debugger;
-                });
+                .then((id: number) => ({data: {...params.data, id}}));
         }
         default:
             throw new Error(`Unsupported Data Provider request type ${type}`);

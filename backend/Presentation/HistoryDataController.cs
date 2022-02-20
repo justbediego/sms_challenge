@@ -50,13 +50,13 @@ namespace SmsChallengeBackend.Presentation
         {
             return historyDataBusiness.GetHistories(new GetHistoriesCriteriaDTO
             {
-                keyword = keyword,
-                pageSize = pageSize,
-                pageIndex = pageIndex,
-                fromDate = fromDate,
-                toDate = toDate,
-                sortField = sortField,
-                isAscending = isAscending
+                Keyword = keyword,
+                PageSize = pageSize,
+                PageIndex = pageIndex,
+                FromDate = fromDate,
+                ToDate = toDate,
+                SortField = sortField,
+                IsAscending = isAscending
             });
         }
     }
