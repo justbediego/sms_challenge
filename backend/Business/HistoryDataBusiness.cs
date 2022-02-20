@@ -95,10 +95,10 @@ namespace SmsChallengeBackend.Business
             {
                 histories = histories.Where(history => history.City.ToLower().Contains(criteria.keyword.Trim().ToLower()));
             }
-            if (criteria.fromData != null)
+            if (criteria.fromDate != null)
             {
                 // overlap of two ranges is applied to both their sides
-                histories = histories.Where(history => history.StartDate >= criteria.fromData || history.EndDate > criteria.fromData);
+                histories = histories.Where(history => history.StartDate >= criteria.fromDate || history.EndDate > criteria.fromDate);
             }
 
             if (criteria.toDate != null)

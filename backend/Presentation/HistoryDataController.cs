@@ -46,14 +46,14 @@ namespace SmsChallengeBackend.Presentation
 
         // all parameters are optionals to beautify the URL
         [HttpGet]
-        public PagingResult<HistoryDataDTO> GetHistories(string keyword = null, int? pageSize = null, int? pageIndex = null, DateTime? fromData = null, DateTime? toDate = null, SortField? sortField = null, bool? isAscending = null)
+        public PagingResult<HistoryDataDTO> GetHistories(string keyword = null, int? pageSize = null, int? pageIndex = null, DateTime? fromDate = null, DateTime? toDate = null, SortField? sortField = null, bool? isAscending = null)
         {
             return historyDataBusiness.GetHistories(new GetHistoriesCriteriaDTO
             {
                 keyword = keyword,
                 pageSize = pageSize,
                 pageIndex = pageIndex,
-                fromData = fromData,
+                fromDate = fromDate,
                 toDate = toDate,
                 sortField = sortField,
                 isAscending = isAscending

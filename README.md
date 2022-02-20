@@ -4,13 +4,25 @@
 
 ## Solution
 
-1. A `postgres` database server is created within a docker container and is then filled with the data provided as a `json` file using a `python3` script.
-
+1. A `postgres` database server is created within a docker container and is then filled with the data provided as a `json` file using a `python` script.
 2. A `.net Core` application is running as the backend engine to provide a RESTful interface together with their swaggerUI documentations.
-
-3. 
-4. 
+3. A `react-admin` frontend is implemented to present the data in a sortable table.
+4. Two Date pickers and a Search box is added to filter the data. (the filter is applied server-side)
 
 ## Structure
 
 ## How to run
+
+
+
+
+
+
+
+#TODO:
+BACKEND TESTS
+FRONTEND TESTS
+ADD-EDIT-DELETE
+KEYWORD FILTER
+START-END FILTER
+REMOVE THIS TODO

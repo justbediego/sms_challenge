@@ -29,7 +29,23 @@ const dataProvider = (type: any, resource: any, params: any) => {
         case GET_LIST: {
             const {page, perPage} = params.pagination;
             const {field, order} = params.sort;
-            return fetch(`${apiUrl}/${resource}?pageIndex=${page}&pageSize=${perPage}&sortField=${field}&isAscending=${order === "ASC"}`, options)
+            const {keyword, fromDate, toDate} = params.filter;
+            const filter = [
+                `pageIndex=${page}`,
+                `pageSize=${perPage}`,
+                `sortField=${field}`,
+                `isAscending=${order === "ASC"}`,
+            ]
+            if (keyword) {
+                filter.push(`keyword=${keyword}`)
+            }
+            if (fromDate) {
+                filter.push(`fromDate=${fromDate}`)
+            }
+            if (toDate) {
+                filter.push(`toDate=${toDate}`)
+            }
+            return fetch(`${apiUrl}/${resource}?${filter.join('&')}`, options)
                 .then(res => res.json())
                 .then((response: PagingResult<HistoryDataDTO>) => ({
                     data: response.data,
