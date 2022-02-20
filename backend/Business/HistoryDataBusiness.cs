@@ -31,10 +31,10 @@ namespace SmsChallengeBackend.Business
             {
                 City = model.City,
                 Color = model.Color,
-                EndDate = model.EndDate,
-                Price = model.Price,
-                StartDate = model.StartDate,
-                Status = model.Status
+                EndDate = model.EndDate.Value,
+                Price = model.Price.Value,
+                StartDate = model.StartDate.Value,
+                Status = model.Status.Value
             };
             dbContext.Histories.Add(newData);
             dbContext.SaveChanges();
@@ -54,12 +54,12 @@ namespace SmsChallengeBackend.Business
             {
                 throw new InvalidInputException("EndDate", "EndDate is before StartDate");
             }
-            historyData.StartDate = model.StartDate;
-            historyData.EndDate = model.EndDate;
-            historyData.Status = model.Status;
+            historyData.StartDate = model.StartDate.Value;
+            historyData.EndDate = model.EndDate.Value;
+            historyData.Status = model.Status.Value;
             historyData.Color = model.Color;
             historyData.City = model.City;
-            historyData.Price = model.Price;
+            historyData.Price = model.Price.Value;
             dbContext.Histories.Update(historyData);
             dbContext.SaveChanges();
         }

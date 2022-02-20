@@ -58,7 +58,14 @@ const dataProvider = (type: any, resource: any, params: any) => {
             } as HistoryDataDTO;
             return fetch(baseUrl, {method: 'POST', headers, body: JSON.stringify(newData)})
                 .then(res => res.json())
-                .then((id: number) => ({data: {...params.data, id}}));
+                .then(res => {
+                    if (res.status && res.status !== 200) {
+                        throw res.errors ?
+                            Object.keys(res.errors).map(key => res.errors[key]).join(", ")
+                            : "Request did not succeed !";
+                    }
+                    return {data: {...params.data, id: res}};
+                });
         }
         default:
             throw new Error(`Unsupported Data Provider request type ${type}`);
