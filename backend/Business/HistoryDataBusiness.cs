@@ -13,7 +13,7 @@ namespace SmsChallengeBackend.Business
         // validations are done at DTO level as no logic validations are required
         private readonly SmsDbContext dbContext;
 
-        private const int MaxPageSize = 200;
+        private const int MaxPageSize = 2000;
 
         public HistoryDataBusiness(SmsDbContext dbContext)
         {
