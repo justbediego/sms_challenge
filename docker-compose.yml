@@ -33,7 +33,7 @@ services:
   # ports are not required to be exposed, this is only done for swaggerUI
   backend:
     container_name: sms_backend
-    build: ./backend
+    build: ./backend/SmsChallengeBackend
     networks:
       - sms_network
     ports:
