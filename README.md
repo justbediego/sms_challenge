@@ -55,12 +55,26 @@ For example, the backend component is currently pointing to internal docker addr
 
 
 ### Running Tests
+Both the frontend and the backend part of the project include their own tests and can be ran seperately.
+In order to run frontend tests simply run the following command (inside the frontend folder):
 
+Initially you would want to install the required packages by:
+
+<code>yarn install</code>
+
+And then running the tests via:
+
+<code>yarn test</code>
+
+
+On the other hand, in order to run backend tests you would need to run the following command (inside the folder backend/SmsChallengeBackendTest):
+
+<code>dotnet test</code>
 
 ## Arguments
 - As the business is small, I personally did not find the need to apply <strong>repository pattern</strong>
 - Considering the size of the project, validations are done at DTO level 
 - GetHistoryData url params are considered optional so url gets shorter when not necessary
-- "From" and "To" filters are applied to both start_date and end_date. This is because I concluded the mission wanted me to extract the overlap of the two ranges (and not the containment).
+- <strong>"From"</strong> and <strong>"To"</strong> filters are applied to both start_date and end_date. This is because I concluded the mission wanted me to extract the overlap of the two ranges (and not the containment).
 - In the importer script, The database structure is not handled with an ORM to keep the script simple
 - serial ID generation is disabled while importing the data.json to assure the same id for the row as given in the json file. 
