@@ -26,10 +26,7 @@ describe('HistoryDataList', () => {
     });
 
     test('matches snapshot', () => {
-        expect(testUtils
-            // .replace(/id="mui-[0-9]*"/g, 'id="mui-id"')
-            // .replace(/aria-labelledby="(mui-[0-9]* *)*"/g, 'aria-labelledby="mui-area-id"')
-        ).toMatchSnapshot();
+        expect(testUtils).toMatchSnapshot();
     });
 
 });
