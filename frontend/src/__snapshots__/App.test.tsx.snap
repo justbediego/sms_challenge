@@ -1,0 +1,940 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="layout RaLayout-root-1"
+        >
+          <button
+            aria-label="Skip to content"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained RaButton-button-6 RaSkipToContentButton-skipToContentButton-5 skip-nav-button MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span
+                class="RaButton-label-7"
+              >
+                Skip to content
+              </span>
+            </span>
+          </button>
+          <div
+            class="RaLayout-appFrame-2"
+          >
+            <header
+              class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorSecondary mui-fixed MuiPaper-elevation4"
+            >
+              <div
+                class="MuiToolbar-root MuiToolbar-dense RaAppBar-toolbar-12"
+              >
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root RaAppBar-menuButton-13 MuiIconButton-colorInherit"
+                  tabindex="0"
+                  title="Open menu"
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root RaSidebarToggleButton-menuButtonIconClosed-17 RaAppBar-menuButtonIconClosed-14"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <h6
+                  class="MuiTypography-root RaAppBar-title-16 MuiTypography-h6 MuiTypography-colorInherit"
+                  id="react-admin-title"
+                >
+                  <span>
+                    Data
+                  </span>
+                </h6>
+                <div
+                  class="MuiCircularProgress-root app-loader RaLoadingIndicator-loader-19 MuiCircularProgress-indeterminate"
+                  role="progressbar"
+                  style="width: 16px; height: 16px;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="19"
+                      stroke-width="6"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="RaUserMenu-user-21"
+                >
+                  <button
+                    aria-haspopup="true"
+                    aria-label="Profile"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                    tabindex="0"
+                    title="Profile"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </header>
+            <main
+              class="RaLayout-contentWithSidebar-3"
+            >
+              <div
+                class="MuiDrawer-root RaSidebar-root-24 MuiDrawer-docked RaSidebar-docked-25"
+              >
+                <div
+                  class="MuiPaper-root MuiDrawer-paper RaSidebar-paper-26 MuiDrawer-paperAnchorLeft RaSidebar-paperAnchorLeft-27 RaSidebar-drawerPaper-37 RaSidebar-drawerPaper-38 MuiDrawer-paperAnchorDockedLeft RaSidebar-paperAnchorDockedLeft-31 MuiPaper-elevation0"
+                >
+                  <div
+                    class="RaSidebar-fixed-36"
+                  >
+                    <div
+                      class="RaMenu-main-39 RaMenu-closed-41"
+                    >
+                      <a
+                        aria-current="page"
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-48 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button RaMenuItemLink-active-49"
+                        href="#/historyData"
+                        role="menuitem"
+                        tabindex="0"
+                        title="Data"
+                      >
+                        <div
+                          class="MuiListItemIcon-root RaMenuItemLink-icon-50"
+                        >
+                          <svg
+                            class="MuiSvgIcon-root"
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"
+                            />
+                            <title>
+                              Data
+                            </title>
+                          </svg>
+                        </div>
+                        Data
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="RaLayout-content-4"
+                id="main-content"
+              >
+                <div
+                  class="list-page RaList-root-51"
+                  filter="[object Object]"
+                >
+                  <div
+                    class="MuiToolbar-root MuiToolbar-regular RaListToolbar-toolbar-57 MuiToolbar-gutters"
+                  >
+                    <form
+                      __versions="[object Object]"
+                      class="RaFilterForm-form-59"
+                    >
+                      <div
+                        class="filter-field RaFilterFormInput-body-61"
+                        data-source="keyword"
+                      >
+                        <div
+                          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense"
+                        >
+                          <label
+                            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-filled"
+                            data-shrink="false"
+                            for="keyword"
+                            id="keyword-label"
+                          >
+                            <span>
+                              Keyword
+                            </span>
+                          </label>
+                          <div
+                            class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                          >
+                            <input
+                              aria-describedby="keyword-helper-text"
+                              aria-invalid="false"
+                              class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                              id="keyword"
+                              name="keyword"
+                              type="text"
+                              value=""
+                            />
+                          </div>
+                          <p
+                            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-marginDense"
+                            id="keyword-helper-text"
+                          />
+                        </div>
+                        <div
+                          class="RaFilterFormInput-spacer-62"
+                        >
+                           
+                        </div>
+                      </div>
+                      <div
+                        class="filter-field RaFilterFormInput-body-61"
+                        data-source="fromDate"
+                      >
+                        <div
+                          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense"
+                        >
+                          <label
+                            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-filled"
+                            data-shrink="true"
+                            for="fromDate"
+                            id="fromDate-label"
+                          >
+                            <span>
+                              From
+                            </span>
+                          </label>
+                          <div
+                            class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                          >
+                            <input
+                              aria-describedby="fromDate-helper-text"
+                              aria-invalid="false"
+                              class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                              id="fromDate"
+                              name="fromDate"
+                              type="date"
+                              value=""
+                            />
+                          </div>
+                          <p
+                            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-marginDense"
+                            id="fromDate-helper-text"
+                          />
+                        </div>
+                        <div
+                          class="RaFilterFormInput-spacer-62"
+                        >
+                           
+                        </div>
+                      </div>
+                      <div
+                        class="filter-field RaFilterFormInput-body-61"
+                        data-source="toDate"
+                      >
+                        <div
+                          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense"
+                        >
+                          <label
+                            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-filled"
+                            data-shrink="true"
+                            for="toDate"
+                            id="toDate-label"
+                          >
+                            <span>
+                              To
+                            </span>
+                          </label>
+                          <div
+                            class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                          >
+                            <input
+                              aria-describedby="toDate-helper-text"
+                              aria-invalid="false"
+                              class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                              id="toDate"
+                              name="toDate"
+                              type="date"
+                              value=""
+                            />
+                          </div>
+                          <p
+                            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-marginDense"
+                            id="toDate-helper-text"
+                          />
+                        </div>
+                        <div
+                          class="RaFilterFormInput-spacer-62"
+                        >
+                           
+                        </div>
+                      </div>
+                      <div
+                        class="RaFilterForm-clearFix-60"
+                      />
+                    </form>
+                    <span />
+                    <div
+                      class="MuiToolbar-root MuiToolbar-regular RaTopToolbar-root-69 RaListToolbar-actions-58 MuiToolbar-gutters"
+                    >
+                      <a
+                        aria-disabled="false"
+                        aria-label="Create"
+                        class="MuiButtonBase-root MuiButton-root MuiButton-text RaButton-button-6 MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+                        href="#/historyData/create"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <span
+                          class="MuiButton-label"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root RaButton-smallIcon-9"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                            />
+                          </svg>
+                          <span
+                            class="RaButton-label-7"
+                          >
+                            Create
+                          </span>
+                        </span>
+                      </a>
+                      <button
+                        aria-label="Export"
+                        class="MuiButtonBase-root MuiButton-root MuiButton-text RaButton-button-6 MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <span
+                          class="MuiButton-label"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root RaButton-smallIcon-9"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"
+                            />
+                          </svg>
+                          <span
+                            class="RaButton-label-7"
+                          >
+                            Export
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="RaList-main-52"
+                  >
+                    <div
+                      class="MuiPaper-root MuiCard-root RaList-content-53 MuiPaper-elevation1 MuiPaper-rounded"
+                    >
+                      <div
+                        class="MuiToolbar-root MuiToolbar-regular RaBulkActionsToolbar-toolbar-72 RaBulkActionsToolbar-collapsed-75 MuiToolbar-gutters"
+                        data-test="bulk-actions-toolbar"
+                      >
+                        <div
+                          class="RaBulkActionsToolbar-title-76"
+                        >
+                          <button
+                            aria-label="Unselect"
+                            class="MuiButtonBase-root MuiIconButton-root RaBulkActionsToolbar-icon-77 MuiIconButton-sizeSmall"
+                            tabindex="0"
+                            title="Unselect"
+                            type="button"
+                          >
+                            <span
+                              class="MuiIconButton-label"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                />
+                              </svg>
+                            </span>
+                          </button>
+                          <h6
+                            class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          >
+                            0 items selected
+                          </h6>
+                        </div>
+                        <div
+                          class="MuiToolbar-root MuiToolbar-regular RaTopToolbar-root-69 RaBulkActionsToolbar-topToolbar-73 MuiToolbar-gutters"
+                        >
+                          <button
+                            aria-label="Delete"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text RaButton-button-6 RaBulkDeleteWithUndoButton-deleteButton-78 MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <span
+                              class="MuiButton-label"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root RaButton-smallIcon-9"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                                />
+                              </svg>
+                              <span
+                                class="RaButton-label-7"
+                              >
+                                Delete
+                              </span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiToolbar-root MuiToolbar-dense MuiToolbar-gutters"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="layout RaLayout-root-1"
+      >
+        <button
+          aria-label="Skip to content"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained RaButton-button-6 RaSkipToContentButton-skipToContentButton-5 skip-nav-button MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <span
+              class="RaButton-label-7"
+            >
+              Skip to content
+            </span>
+          </span>
+        </button>
+        <div
+          class="RaLayout-appFrame-2"
+        >
+          <header
+            class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorSecondary mui-fixed MuiPaper-elevation4"
+          >
+            <div
+              class="MuiToolbar-root MuiToolbar-dense RaAppBar-toolbar-12"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root RaAppBar-menuButton-13 MuiIconButton-colorInherit"
+                tabindex="0"
+                title="Open menu"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root RaSidebarToggleButton-menuButtonIconClosed-17 RaAppBar-menuButtonIconClosed-14"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <h6
+                class="MuiTypography-root RaAppBar-title-16 MuiTypography-h6 MuiTypography-colorInherit"
+                id="react-admin-title"
+              >
+                <span>
+                  Data
+                </span>
+              </h6>
+              <div
+                class="MuiCircularProgress-root app-loader RaLoadingIndicator-loader-19 MuiCircularProgress-indeterminate"
+                role="progressbar"
+                style="width: 16px; height: 16px;"
+              >
+                <svg
+                  class="MuiCircularProgress-svg"
+                  viewBox="22 22 44 44"
+                >
+                  <circle
+                    class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                    cx="44"
+                    cy="44"
+                    fill="none"
+                    r="19"
+                    stroke-width="6"
+                  />
+                </svg>
+              </div>
+              <div
+                class="RaUserMenu-user-21"
+              >
+                <button
+                  aria-haspopup="true"
+                  aria-label="Profile"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                  tabindex="0"
+                  title="Profile"
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </header>
+          <main
+            class="RaLayout-contentWithSidebar-3"
+          >
+            <div
+              class="MuiDrawer-root RaSidebar-root-24 MuiDrawer-docked RaSidebar-docked-25"
+            >
+              <div
+                class="MuiPaper-root MuiDrawer-paper RaSidebar-paper-26 MuiDrawer-paperAnchorLeft RaSidebar-paperAnchorLeft-27 RaSidebar-drawerPaper-37 RaSidebar-drawerPaper-38 MuiDrawer-paperAnchorDockedLeft RaSidebar-paperAnchorDockedLeft-31 MuiPaper-elevation0"
+              >
+                <div
+                  class="RaSidebar-fixed-36"
+                >
+                  <div
+                    class="RaMenu-main-39 RaMenu-closed-41"
+                  >
+                    <a
+                      aria-current="page"
+                      aria-disabled="false"
+                      class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root RaMenuItemLink-root-48 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button RaMenuItemLink-active-49"
+                      href="#/historyData"
+                      role="menuitem"
+                      tabindex="0"
+                      title="Data"
+                    >
+                      <div
+                        class="MuiListItemIcon-root RaMenuItemLink-icon-50"
+                      >
+                        <svg
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"
+                          />
+                          <title>
+                            Data
+                          </title>
+                        </svg>
+                      </div>
+                      Data
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="RaLayout-content-4"
+              id="main-content"
+            >
+              <div
+                class="list-page RaList-root-51"
+                filter="[object Object]"
+              >
+                <div
+                  class="MuiToolbar-root MuiToolbar-regular RaListToolbar-toolbar-57 MuiToolbar-gutters"
+                >
+                  <form
+                    __versions="[object Object]"
+                    class="RaFilterForm-form-59"
+                  >
+                    <div
+                      class="filter-field RaFilterFormInput-body-61"
+                      data-source="keyword"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-filled"
+                          data-shrink="false"
+                          for="keyword"
+                          id="keyword-label"
+                        >
+                          <span>
+                            Keyword
+                          </span>
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                        >
+                          <input
+                            aria-describedby="keyword-helper-text"
+                            aria-invalid="false"
+                            class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                            id="keyword"
+                            name="keyword"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <p
+                          class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-marginDense"
+                          id="keyword-helper-text"
+                        />
+                      </div>
+                      <div
+                        class="RaFilterFormInput-spacer-62"
+                      >
+                         
+                      </div>
+                    </div>
+                    <div
+                      class="filter-field RaFilterFormInput-body-61"
+                      data-source="fromDate"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-filled"
+                          data-shrink="true"
+                          for="fromDate"
+                          id="fromDate-label"
+                        >
+                          <span>
+                            From
+                          </span>
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                        >
+                          <input
+                            aria-describedby="fromDate-helper-text"
+                            aria-invalid="false"
+                            class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                            id="fromDate"
+                            name="fromDate"
+                            type="date"
+                            value=""
+                          />
+                        </div>
+                        <p
+                          class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-marginDense"
+                          id="fromDate-helper-text"
+                        />
+                      </div>
+                      <div
+                        class="RaFilterFormInput-spacer-62"
+                      >
+                         
+                      </div>
+                    </div>
+                    <div
+                      class="filter-field RaFilterFormInput-body-61"
+                      data-source="toDate"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-filled"
+                          data-shrink="true"
+                          for="toDate"
+                          id="toDate-label"
+                        >
+                          <span>
+                            To
+                          </span>
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                        >
+                          <input
+                            aria-describedby="toDate-helper-text"
+                            aria-invalid="false"
+                            class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                            id="toDate"
+                            name="toDate"
+                            type="date"
+                            value=""
+                          />
+                        </div>
+                        <p
+                          class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-marginDense"
+                          id="toDate-helper-text"
+                        />
+                      </div>
+                      <div
+                        class="RaFilterFormInput-spacer-62"
+                      >
+                         
+                      </div>
+                    </div>
+                    <div
+                      class="RaFilterForm-clearFix-60"
+                    />
+                  </form>
+                  <span />
+                  <div
+                    class="MuiToolbar-root MuiToolbar-regular RaTopToolbar-root-69 RaListToolbar-actions-58 MuiToolbar-gutters"
+                  >
+                    <a
+                      aria-disabled="false"
+                      aria-label="Create"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text RaButton-button-6 MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+                      href="#/historyData/create"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <span
+                        class="MuiButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root RaButton-smallIcon-9"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                          />
+                        </svg>
+                        <span
+                          class="RaButton-label-7"
+                        >
+                          Create
+                        </span>
+                      </span>
+                    </a>
+                    <button
+                      aria-label="Export"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text RaButton-button-6 MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root RaButton-smallIcon-9"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"
+                          />
+                        </svg>
+                        <span
+                          class="RaButton-label-7"
+                        >
+                          Export
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="RaList-main-52"
+                >
+                  <div
+                    class="MuiPaper-root MuiCard-root RaList-content-53 MuiPaper-elevation1 MuiPaper-rounded"
+                  >
+                    <div
+                      class="MuiToolbar-root MuiToolbar-regular RaBulkActionsToolbar-toolbar-72 RaBulkActionsToolbar-collapsed-75 MuiToolbar-gutters"
+                      data-test="bulk-actions-toolbar"
+                    >
+                      <div
+                        class="RaBulkActionsToolbar-title-76"
+                      >
+                        <button
+                          aria-label="Unselect"
+                          class="MuiButtonBase-root MuiIconButton-root RaBulkActionsToolbar-icon-77 MuiIconButton-sizeSmall"
+                          tabindex="0"
+                          title="Unselect"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                        <h6
+                          class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        >
+                          0 items selected
+                        </h6>
+                      </div>
+                      <div
+                        class="MuiToolbar-root MuiToolbar-regular RaTopToolbar-root-69 RaBulkActionsToolbar-topToolbar-73 MuiToolbar-gutters"
+                      >
+                        <button
+                          aria-label="Delete"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text RaButton-button-6 RaBulkDeleteWithUndoButton-deleteButton-78 MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+                          tabindex="0"
+                          type="button"
+                        >
+                          <span
+                            class="MuiButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root RaButton-smallIcon-9"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              />
+                            </svg>
+                            <span
+                              class="RaButton-label-7"
+                            >
+                              Delete
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiToolbar-root MuiToolbar-dense MuiToolbar-gutters"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

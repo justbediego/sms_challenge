@@ -55,7 +55,7 @@ For example, the backend component is currently pointing to internal docker addr
 
 
 ### Running Tests
-s
+
 
 ## Arguments
 - As the business is small, I personally did not find the need to apply <strong>repository pattern</strong>
