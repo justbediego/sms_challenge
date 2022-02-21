@@ -1,12 +1,12 @@
 import React from 'react';
-import {render, RenderResult} from '@testing-library/react';
 import {HistoryDataList} from './HistoryDataList';
 import {TestContext} from "ra-test";
 import {ThemeProvider} from '@material-ui/styles';
 import {createTheme} from '@material-ui/core/styles';
+import ReactDOMServer from 'react-dom/server';
 
 describe('HistoryDataList', () => {
-    let testUtils: RenderResult;
+    let testUtils: string;
 
     beforeEach(() => {
         const defaultEditProps = {
@@ -16,7 +16,7 @@ describe('HistoryDataList', () => {
         };
         const theme = createTheme({});
 
-        testUtils = render(
+        testUtils = ReactDOMServer.renderToStaticMarkup(
             <ThemeProvider theme={theme}>
                 <TestContext enableReducers={true}>
                     <HistoryDataList {...defaultEditProps} />
@@ -26,7 +26,10 @@ describe('HistoryDataList', () => {
     });
 
     test('matches snapshot', () => {
-        expect(testUtils).toMatchSnapshot();
+        expect(testUtils
+            // .replace(/id="mui-[0-9]*"/g, 'id="mui-id"')
+            // .replace(/aria-labelledby="(mui-[0-9]* *)*"/g, 'aria-labelledby="mui-area-id"')
+        ).toMatchSnapshot();
     });
 
 });
