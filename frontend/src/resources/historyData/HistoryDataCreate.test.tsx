@@ -1,9 +1,27 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { HistoryDataCreate } from './HistoryDataCreate';
+import {render, RenderResult} from '@testing-library/react';
+import {HistoryDataCreate} from './HistoryDataCreate';
+import {TestContext} from 'ra-test';
 
-test('renders learn react link', () => {
-    render(<HistoryDataCreate />);
-    const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
+describe('HistoryDataCreate', () => {
+    let testUtils: RenderResult;
+
+    beforeEach(() => {
+        const defaultEditProps = {
+            basePath: 'basePath',
+            id: 'testID',
+            resource: 'testResource',
+        };
+
+        testUtils = render(
+            <TestContext enableReducers={true}>
+                <HistoryDataCreate {...defaultEditProps} />
+            </TestContext>
+        );
+    });
+
+    test('matches snapshot', () => {
+        expect(testUtils).toMatchSnapshot();
+    });
+
 });

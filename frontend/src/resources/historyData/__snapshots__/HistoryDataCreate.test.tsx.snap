@@ -1,0 +1,756 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoryDataCreate matches snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="create-page RaCreate-root-1"
+        id="testID"
+        record="[object Object]"
+        redirect="list"
+        resource="testResource"
+        version="1"
+      >
+        <div
+          class="RaCreate-main-2 RaCreate-noActions-3"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root RaCreate-card-4 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <form
+              class="simple-form"
+            >
+              <div
+                class="MuiCardContent-root RaCardContentInner-root-5"
+              >
+                <div
+                  class="ra-input ra-input-city"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginDense"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                      data-shrink="false"
+                      for="city"
+                      id="city-label"
+                    >
+                      <span>
+                        resources.testResource.fields.city
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                      >
+                         
+                        *
+                      </span>
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                    >
+                      <input
+                        aria-describedby="city-helper-text"
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                        id="city"
+                        name="city"
+                        required=""
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                      id="city-helper-text"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="ra-input ra-input-startDate"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginDense"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                      data-shrink="true"
+                      for="startDate"
+                      id="startDate-label"
+                    >
+                      <span>
+                        resources.testResource.fields.startDate
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                      >
+                         
+                        *
+                      </span>
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                    >
+                      <input
+                        aria-describedby="startDate-helper-text"
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                        id="startDate"
+                        name="startDate"
+                        required=""
+                        type="date"
+                        value=""
+                      />
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                      id="startDate-helper-text"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="ra-input ra-input-endDate"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginDense"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                      data-shrink="true"
+                      for="endDate"
+                      id="endDate-label"
+                    >
+                      <span>
+                        resources.testResource.fields.endDate
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                      >
+                         
+                        *
+                      </span>
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                    >
+                      <input
+                        aria-describedby="endDate-helper-text"
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                        id="endDate"
+                        name="endDate"
+                        required=""
+                        type="date"
+                        value=""
+                      />
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                      id="endDate-helper-text"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="ra-input ra-input-price"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginDense"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                      data-shrink="false"
+                      for="price"
+                      id="price-label"
+                    >
+                      <span>
+                        resources.testResource.fields.price
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                      >
+                         
+                        *
+                      </span>
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                    >
+                      <input
+                        aria-describedby="price-helper-text"
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                        id="price"
+                        name="price"
+                        required=""
+                        step="any"
+                        type="number"
+                        value=""
+                      />
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                      id="price-helper-text"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="ra-input ra-input-status"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root RaSelectInput-input-17 RaFormInput-input-6 MuiFormControl-marginDense"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                      data-shrink="false"
+                      for="status"
+                      id="status-label"
+                    >
+                      <span>
+                        resources.testResource.fields.status
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                      >
+                         
+                        *
+                      </span>
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                    >
+                      <div
+                        aria-haspopup="listbox"
+                        aria-labelledby="status-label status"
+                        class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-filled MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                        id="status"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <span>
+                          ​
+                        </span>
+                      </div>
+                      <input
+                        aria-describedby="status-helper-text"
+                        aria-hidden="true"
+                        class="MuiSelect-nativeInput"
+                        name="status"
+                        required=""
+                        tabindex="-1"
+                        value=""
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconFilled"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7 10l5 5 5-5z"
+                        />
+                      </svg>
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                      id="status-helper-text"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="ra-input ra-input-color"
+                >
+                  <div>
+                    <div
+                      class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginNormal"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                        data-shrink="false"
+                      >
+                        <span>
+                          resources.testResource.fields.color
+                        </span>
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiInput-input"
+                          name="color"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiToolbar-root MuiToolbar-regular RaToolbar-toolbar-18 RaToolbar-mobileToolbar-20 MuiToolbar-gutters"
+                role="toolbar"
+              >
+                <div
+                  class="RaToolbar-defaultToolbar-21"
+                >
+                  <button
+                    aria-label="ra.action.save"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained RaSaveButton-button-23 MuiButton-containedPrimary Mui-disabled Mui-disabled"
+                    disabled=""
+                    tabindex="-1"
+                    type="submit"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root RaSaveButton-leftIcon-24 RaSaveButton-icon-25"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+                        />
+                      </svg>
+                      ra.action.save
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="RaToolbar-spacer-22"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="create-page RaCreate-root-1"
+      id="testID"
+      record="[object Object]"
+      redirect="list"
+      resource="testResource"
+      version="1"
+    >
+      <div
+        class="RaCreate-main-2 RaCreate-noActions-3"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root RaCreate-card-4 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <form
+            class="simple-form"
+          >
+            <div
+              class="MuiCardContent-root RaCardContentInner-root-5"
+            >
+              <div
+                class="ra-input ra-input-city"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginDense"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                    data-shrink="false"
+                    for="city"
+                    id="city-label"
+                  >
+                    <span>
+                      resources.testResource.fields.city
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                  >
+                    <input
+                      aria-describedby="city-helper-text"
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                      id="city"
+                      name="city"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                    id="city-helper-text"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="ra-input ra-input-startDate"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginDense"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                    data-shrink="true"
+                    for="startDate"
+                    id="startDate-label"
+                  >
+                    <span>
+                      resources.testResource.fields.startDate
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                  >
+                    <input
+                      aria-describedby="startDate-helper-text"
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                      id="startDate"
+                      name="startDate"
+                      required=""
+                      type="date"
+                      value=""
+                    />
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                    id="startDate-helper-text"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="ra-input ra-input-endDate"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginDense"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                    data-shrink="true"
+                    for="endDate"
+                    id="endDate-label"
+                  >
+                    <span>
+                      resources.testResource.fields.endDate
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                  >
+                    <input
+                      aria-describedby="endDate-helper-text"
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                      id="endDate"
+                      name="endDate"
+                      required=""
+                      type="date"
+                      value=""
+                    />
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                    id="endDate-helper-text"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="ra-input ra-input-price"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginDense"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                    data-shrink="false"
+                    for="price"
+                    id="price-label"
+                  >
+                    <span>
+                      resources.testResource.fields.price
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                  >
+                    <input
+                      aria-describedby="price-helper-text"
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                      id="price"
+                      name="price"
+                      required=""
+                      step="any"
+                      type="number"
+                      value=""
+                    />
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                    id="price-helper-text"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="ra-input ra-input-status"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root RaSelectInput-input-17 RaFormInput-input-6 MuiFormControl-marginDense"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-filled Mui-required Mui-required"
+                    data-shrink="false"
+                    for="status"
+                    id="status-label"
+                  >
+                    <span>
+                      resources.testResource.fields.status
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-marginDense MuiFilledInput-marginDense"
+                  >
+                    <div
+                      aria-haspopup="listbox"
+                      aria-labelledby="status-label status"
+                      class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-filled MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMarginDense MuiFilledInput-inputMarginDense"
+                      id="status"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </div>
+                    <input
+                      aria-describedby="status-helper-text"
+                      aria-hidden="true"
+                      class="MuiSelect-nativeInput"
+                      name="status"
+                      required=""
+                      tabindex="-1"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconFilled"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5z"
+                      />
+                    </svg>
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required MuiFormHelperText-marginDense"
+                    id="status-helper-text"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="ra-input ra-input-color"
+              >
+                <div>
+                  <div
+                    class="MuiFormControl-root MuiTextField-root RaFormInput-input-6 MuiFormControl-marginNormal"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                      data-shrink="false"
+                    >
+                      <span>
+                        resources.testResource.fields.color
+                      </span>
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                    >
+                      <input
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input"
+                        name="color"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiToolbar-root MuiToolbar-regular RaToolbar-toolbar-18 RaToolbar-mobileToolbar-20 MuiToolbar-gutters"
+              role="toolbar"
+            >
+              <div
+                class="RaToolbar-defaultToolbar-21"
+              >
+                <button
+                  aria-label="ra.action.save"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained RaSaveButton-button-23 MuiButton-containedPrimary Mui-disabled Mui-disabled"
+                  disabled=""
+                  tabindex="-1"
+                  type="submit"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root RaSaveButton-leftIcon-24 RaSaveButton-icon-25"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+                      />
+                    </svg>
+                    ra.action.save
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="RaToolbar-spacer-22"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

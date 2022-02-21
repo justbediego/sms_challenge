@@ -1,9 +1,27 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { HistoryDataEdit } from './HistoryDataEdit';
+import {render, RenderResult} from '@testing-library/react';
+import {HistoryDataEdit} from './HistoryDataEdit';
+import {TestContext} from "ra-test";
 
-test('renders learn react link', () => {
-    render(<HistoryDataEdit />);
-    const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
+describe('HistoryDataEdit', () => {
+    let testUtils: RenderResult;
+
+    beforeEach(() => {
+        const defaultEditProps = {
+            basePath: 'basePath',
+            id: 'testID',
+            resource: 'testResource',
+        };
+
+        testUtils = render(
+            <TestContext enableReducers={true}>
+                <HistoryDataEdit {...defaultEditProps} />
+            </TestContext>
+        );
+    });
+
+    test('matches snapshot', () => {
+        expect(testUtils).toMatchSnapshot();
+    });
+
 });

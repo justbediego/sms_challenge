@@ -13,6 +13,7 @@
     "node-sass": "^7.0.1",
     "prop-types": "^15.8.1",
     "ra-data-json-server": "^3.19.10",
+    "ra-test": "^3.19.10",
     "react": "^17.0.2",
     "react-admin": "^3.19.10",
     "react-admin-color-input": "^3.0.0-beta.0",
