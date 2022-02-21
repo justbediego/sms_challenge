@@ -52,3 +52,15 @@ After the command is successfully ran you can access the application through the
 ### Running locally
 In case you need to run any of these components locally on your machine you need to consider modifying their network configuration. Since they will no longer be running within a bridged netweek inside docker, they need to pinpoint to the correct address.
 For example, the backend component is currently pointing to internal docker address, <strong>http://database:5432</strong>, and this will need to change to an external address, something similar to <strong>http://localhost:1432</strong>.
+
+
+### Running Tests
+s
+
+## Arguments
+- As the business is small, I personally did not find the need to apply <strong>repository pattern</strong>
+- Considering the size of the project, validations are done at DTO level 
+- GetHistoryData url params are considered optional so url gets shorter when not necessary
+- "From" and "To" filters are applied to both start_date and end_date. This is because I concluded the mission wanted me to extract the overlap of the two ranges (and not the containment).
+- In the importer script, The database structure is not handled with an ORM to keep the script simple
+- serial ID generation is disabled while importing the data.json to assure the same id for the row as given in the json file. 
